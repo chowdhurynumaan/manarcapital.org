@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manar Capital - Your trusted partner for financial excellence. Illuminating the path to prosperity with wisdom, integrity, and innovation.">
+  <meta name="keywords" content="Manar Capital, Finance, Investment, Financial Services, Wealth Management">
+  <meta name="author" content="Manar Capital">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Manar Capital | Guiding Light in Finance">
+  <meta property="og:description" content="Illuminating the path to financial excellence. Your trusted partner in navigating the complexities of modern finance.">
+  <meta property="og:site_name" content="Manar Capital">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manar Capital | Guiding Light in Finance">
+  <meta name="twitter:description" content="Illuminating the path to financial excellence. Your trusted partner in navigating the complexities of modern finance.">
+  
+  <title>Manar Capital | Guiding Light in Finance</title>
+  
+  <style>
+    :root {
+      --background: #0a0a0a;
+      --foreground: #fafafa;
+      --primary: #c9a227;
+      --primary-light: #e6c458;
+      --primary-dark: #b8941e;
+      --text-muted: #888888;
+      --text-dim: #555555;
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: var(--foreground);
+      background: var(--background);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--primary-light);
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: linear-gradient(180deg, var(--background) 0%, transparent 100%);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--foreground);
+    }
+
+    .nav-brand-logo {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--foreground);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(201, 162, 39, 0.05) 0%, transparent 50%);
+      animation: pulse 10s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo {
+      font-size: 5rem;
+      color: var(--primary);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+      }
+      to {
+        text-shadow: 0 0 20px var(--primary-light), 0 0 40px var(--primary-light), 0 0 60px var(--primary-light);
+      }
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: 1.75rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .hero-description {
+      font-size: 1.35rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-container {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--background);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--background);
+    }
+
+    /* Vision Section */
+    .section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1.125rem;
+      margin-bottom: 4rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .vision-meaning {
+      text-align: center;
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .vision-meaning strong {
+      color: var(--primary);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .value-card {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.05) 0%, rgba(201, 162, 39, 0.02) 100%);
+      border: 1px solid rgba(201, 162, 39, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--foreground);
+    }
+
+    .value-description {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      background: rgba(201, 162, 39, 0.05);
+      border-color: rgba(201, 162, 39, 0.2);
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .service-description {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Technology Section */
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .tech-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+    }
+
+    .tech-badge:hover {
+      border-color: var(--primary);
+      color: var(--foreground);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-brand-logo {
+      color: var(--primary);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-tagline {
+      color: var(--primary);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-dim);
+      font-size: 0.875rem;
+    }
+
+    .footer-star {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav {
+        padding: 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 2.75rem;
+      }
+
+      .logo {
+        font-size: 3.5rem;
+      }
+
+      .hero-tagline {
+        font-size: 1.25rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .cta-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.25rem;
+      }
+
+      .logo {
+        font-size: 2.75rem;
+      }
+
+      .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-brand">
+      <span class="nav-brand-logo">✦</span>
+      <span>Manar Capital</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="logo-container">
+        <span class="logo">✦</span>
+        <h1 class="hero-title">Manar Capital</h1>
+      </div>
+      <p class="hero-tagline">Guiding Light in Finance</p>
+      <p class="hero-description">
+        Illuminating the path to financial excellence. Your trusted partner 
+        in navigating the complexities of modern finance with wisdom, 
+        integrity, and innovation.
+      </p>
+      <div class="cta-container">
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section id="vision" class="section">
+    <h2 class="section-title">Our Vision</h2>
+    <p class="vision-meaning">
+      <strong>Manar</strong> (منار) means "lighthouse" or "guiding light" in Arabic. 
+      Just as a lighthouse guides ships safely to shore through the darkest nights, 
+      Manar Capital aims to be the beacon of clarity and trust in the complex world of finance.
+    </p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <h3 class="value-title">Clarity</h3>
+        <p class="value-description">
+          Cutting through financial complexity to provide clear, 
+          actionable insights for your financial journey.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3 class="value-title">Trust</h3>
+        <p class="value-description">
+          Building lasting relationships through transparency, 
+          honesty, and unwavering commitment to your success.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💡</div>
+        <h3 class="value-title">Innovation</h3>
+        <p class="value-description">
+          Embracing cutting-edge technology to serve our clients 
+          better and stay ahead in a rapidly evolving landscape.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌍</div>
+        <h3 class="value-title">Impact</h3>
+        <p class="value-description">
+          Creating value that extends beyond the balance sheet, 
+          making a positive difference in communities worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">
+      Comprehensive financial solutions tailored to your unique needs
+    </p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 class="service-title">Wealth Management</h3>
+        <p class="service-description">
+          Strategic portfolio management and personalized investment strategies 
+          designed to grow and protect your wealth for generations.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-title">Investment Advisory</h3>
+        <p class="service-description">
+          Expert guidance on investment opportunities, market analysis, 
+          and risk assessment to help you make informed decisions.
+        </p>
+      </div>
+      <div class="service-card">
+        <h3 class="service-title">Financial Planning</h3>
+        <p class="service-description">
+          Comprehensive financial planning services that align your 
+          resources with your life goals and aspirations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section id="technology" class="section">
+    <h2 class="section-title">Built with Modern Technology</h2>
+    <p class="section-subtitle">
+      Our platform leverages cutting-edge technology stack for performance, 
+      security, and scalability.
+    </p>
+    <div class="tech-badges">
+      <span class="tech-badge">TypeScript 5.7</span>
+      <span class="tech-badge">Next.js 15</span>
+      <span class="tech-badge">React 19</span>
+      <span class="tech-badge">Turborepo</span>
+      <span class="tech-badge">tRPC</span>
+      <span class="tech-badge">Zod</span>
+      <span class="tech-badge">Terraform</span>
+      <span class="tech-badge">Vercel</span>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">
+      Ready to illuminate your financial future? We're here to help.
+    </p>
+    <div class="cta-container">
+      <a href="mailto:contact@manarcapital.org" class="btn btn-primary">Contact Us</a>
+      <a href="https://github.com/chowdhurynumaan/manarcapital.org" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="footer-brand-logo">✦</span>
+      <span>Manar Capital</span>
+    </div>
+    <div class="footer-links">
+      <a href="#vision">Vision</a>
+      <a href="#services">Services</a>
+      <a href="#technology">Technology</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/chowdhurynumaan/manarcapital.org" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <p class="footer-tagline">Let us be your guiding light.</p>
+    <p class="footer-copyright">
+      © <span id="year"></span> Manar Capital. All rights reserved. 
+      Licensed under <a href="./LICENSE">MIT License</a>.
+    </p>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <div class="footer-star">✦</div>
+  </footer>
+</body>
+</html>
