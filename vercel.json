@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "pnpm turbo build --filter=@manarcapital/portal",
+  "installCommand": "pnpm install",
+  "ignoreCommand": "npx turbo-ignore",
+  "outputDirectory": "apps/portal/.next"
+}

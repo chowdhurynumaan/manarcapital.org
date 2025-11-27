@@ -1,0 +1,22 @@
+{
+  "name": "manarcapital",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Manar Capital - Guiding Light in Finance. A scalable, multi-subdomain platform.",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "clean": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "turbo": "^2.5.0",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=20"
+  }
+}
